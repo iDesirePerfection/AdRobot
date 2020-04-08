@@ -38,7 +38,7 @@ class TimelineHeader extends React.Component {
                 <Col lg="6" xs="7">
                   <h6 className="fullcalendar-title h2 text-white d-inline-block mb-0">
                     {this.props.name}
-                  </h6>{" "}
+                  </h6>
                   <Breadcrumb
                     className="d-none d-md-inline-block ml-lg-4"
                     listClassName="breadcrumb-links breadcrumb-dark"

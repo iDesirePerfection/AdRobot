@@ -156,8 +156,8 @@ class Sidebar extends React.Component {
                 <span className="nav-link-text">{prop.name}</span>
               </>
             ) : (
-              prop.name
-            )}
+                prop.name
+              )}
           </NavLink>
         </NavItem>
       );
@@ -207,8 +207,7 @@ class Sidebar extends React.Component {
         <div className="navbar-inner">
           <Collapse navbar isOpen={true}>
             <Nav navbar>{this.createLinks(routes)}</Nav>
-            <hr className="my-3" />
-            <h6 className="navbar-heading p-0 text-muted">Documentation</h6>
+            {/* <h6 className="navbar-heading p-0 text-muted">Documentation</h6>
             <Nav className="mb-md-3" navbar>
               <NavItem>
                 <NavLink
@@ -246,7 +245,7 @@ class Sidebar extends React.Component {
                   <span className="nav-link-text">Plugins</span>
                 </NavLink>
               </NavItem>
-            </Nav>
+            </Nav> */}
           </Collapse>
         </div>
       </div>
@@ -260,8 +259,8 @@ class Sidebar extends React.Component {
         {navigator.platform.indexOf("Win") > -1 ? (
           <PerfectScrollbar>{scrollBarInner}</PerfectScrollbar>
         ) : (
-          scrollBarInner
-        )}
+            scrollBarInner
+          )}
       </Navbar>
     );
   }
@@ -269,7 +268,7 @@ class Sidebar extends React.Component {
 
 Sidebar.defaultProps = {
   routes: [{}],
-  toggleSidenav: () => {},
+  toggleSidenav: () => { },
   sidenavOpen: false
 };
 

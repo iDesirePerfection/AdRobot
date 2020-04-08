@@ -32,10 +32,10 @@ class Calendar extends React.Component {
                   © {new Date().getFullYear()}{" "}
                   <a
                     className="font-weight-bold ml-1"
-                    href="https://www.creative-tim.com?ref=adpr-admin-footer"
+                    href="https://www.facebook.com/AdRobot-automated-marketing-105216527815203/"
                     target="_blank"
                   >
-                    Creative Tim
+                    Ad Robot
                   </a>
                 </div>
               </Col>
@@ -43,15 +43,15 @@ class Calendar extends React.Component {
                 <Nav className="nav-footer justify-content-center justify-content-lg-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adpr-admin-footer"
+                      href="https://www.facebook.com/AdRobot-automated-marketing-105216527815203/"
                       target="_blank"
                     >
-                      Creative Tim
+                      Ad Robot
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adpr-admin-footer"
+                      href="https://www.facebook.com/AdRobot-automated-marketing-105216527815203/"
                       target="_blank"
                     >
                       About Us
@@ -59,7 +59,7 @@ class Calendar extends React.Component {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="http://blog.creative-tim.com?ref=adpr-admin-footer"
+                      href="https://www.facebook.com/AdRobot-automated-marketing-105216527815203/"
                       target="_blank"
                     >
                       Blog
@@ -67,7 +67,7 @@ class Calendar extends React.Component {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/license?ref=adpr-admin-footer"
+                      href="https://www.facebook.com/AdRobot-automated-marketing-105216527815203/"
                       target="_blank"
                     >
                       License

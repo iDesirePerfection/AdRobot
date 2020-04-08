@@ -16,7 +16,7 @@
 */
 const Chart = require("chart.js");
 // Only for demo purposes - return a random number to generate datasets
-var randomScalingFactor = function() {
+var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
 };
 
@@ -25,7 +25,7 @@ var randomScalingFactor = function() {
 // Code from: https://codepen.io/jedtrow/full/ygRYgo
 //
 
-Chart.elements.Rectangle.prototype.draw = function() {
+Chart.elements.Rectangle.prototype.draw = function () {
   var ctx = this._chart.ctx;
   var vm = this._view;
   var left, right, top, bottom, signX, signY, borderSkipped, radius;
@@ -119,7 +119,7 @@ Chart.elements.Rectangle.prototype.draw = function() {
     let x = corners[1][0];
     let y = corners[1][1];
     // eslint-disable-next-line
-    var radius: any = cornerRadius;
+    var radius = cornerRadius;
 
     // Fix radius being too large
     if (radius > height / 2) {
@@ -232,11 +232,11 @@ function chartOptions() {
       },
       doughnut: {
         cutoutPercentage: 83,
-        legendCallback: function(chart) {
+        legendCallback: function (chart) {
           var data = chart.data;
           var content = "";
 
-          data.labels.forEach(function(label, index) {
+          data.labels.forEach(function (label, index) {
             var bgColor = data.datasets[0].backgroundColor[index];
 
             content += '<span class="chart-legend-item">';
@@ -271,7 +271,7 @@ function chartOptions() {
     ticks: {
       beginAtZero: true,
       padding: 10,
-      callback: function(value) {
+      callback: function (value) {
         if (!(value % 10)) {
           return value;
         }
@@ -317,7 +317,7 @@ let chartExample1 = {
             zeroLineColor: colors.gray[700]
           },
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               if (!(value % 10)) {
                 return "$" + value + "k";
               }
@@ -328,7 +328,7 @@ let chartExample1 = {
     },
     tooltips: {
       callbacks: {
-        label: function(item, data) {
+        label: function (item, data) {
           var label = data.datasets[item.datasetIndex].label || "";
           var yLabel = item.yLabel;
           var content = "";
@@ -378,7 +378,7 @@ let chartExample2 = {
             zeroLineColor: colors.gray[200]
           },
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               if (!(value % 10)) {
                 //return '$' + value + 'k'
                 return value;
@@ -390,7 +390,7 @@ let chartExample2 = {
     },
     tooltips: {
       callbacks: {
-        label: function(item, data) {
+        label: function (item, data) {
           var label = data.datasets[item.datasetIndex].label || "";
           var yLabel = item.yLabel;
           var content = "";

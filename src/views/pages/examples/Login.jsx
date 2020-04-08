@@ -17,6 +17,9 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
+
+import axios from 'axios';
+// import { Redirect } from 'react-router-dom';
 // reactstrap components
 import {
   Button,
@@ -37,7 +40,32 @@ import {
 import AuthHeader from "components/Headers/AuthHeader.jsx";
 
 class Login extends React.Component {
-  state = {};
+  state = {
+    username: null,
+    password: null
+  };
+  componentDidMount() {
+
+  };
+
+  trySignInHandler = () => {
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(e => console.log(e));
+    //if (this.state)
+
+    console.log(this.state.username);
+    console.log(this.state.password);
+
+
+
+  }
+
+  emailChangedHandler = (event) => {
+    this.setState({ username: event.target.value });
+  }
+  passwordChangedHandler = (event) => {
+    this.setState({ password: event.target.value });
+  }
   render() {
     return (
       <>
@@ -103,6 +131,7 @@ class Login extends React.Component {
                         <Input
                           placeholder="Email"
                           type="email"
+                          onChange={(event) => this.emailChangedHandler(event)}
                           onFocus={() => this.setState({ focusedEmail: true })}
                           onBlur={() => this.setState({ focusedEmail: false })}
                         />
@@ -122,6 +151,7 @@ class Login extends React.Component {
                         <Input
                           placeholder="Password"
                           type="password"
+                          onChange={(event) => this.passwordChangedHandler(event)}
                           onFocus={() =>
                             this.setState({ focusedPassword: true })
                           }
@@ -145,7 +175,7 @@ class Login extends React.Component {
                       </label>
                     </div>
                     <div className="text-center">
-                      <Button className="my-4" color="info" type="button">
+                      <Button onClick={this.trySignInHandler} className="my-4" color="info" type="button">
                         Sign in
                       </Button>
                     </div>
